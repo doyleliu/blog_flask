@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+      <script type=text/javascript>
+        $(function() {
+            $('#img1').click(function(){
+              $.ajax({
+                url: '/changepic',
+                data:{
+                  a: document.getElementById("img1").src,
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                  $("#result").html(data.result);
+                  document.getElementById("img1").src = "http://127.0.0.1:5000/static/thumbnails/001.ak47_001_0087.jpg"
+                }
+              });
+            });
+            $('#img2').click(function(){
+              $.ajax({
+                url: '/changepic',
+                data:{
+                  a: document.getElementById("img1").src,
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                  $("#result").html(data.result);
+                  document.getElementById("img1").src = "http://127.0.0.1:5000/static/img/001.ak47_001_0086.jpg"
+                }
+              });
+            });
+            $('#img3').click(function(){
+              $.ajax({
+                url: '/changepic',
+                data:{
+                  a: document.getElementById("img1").src,
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                  $("#result").html(data.result);
+                  document.getElementById("img1").src = "http://127.0.0.1:5000/static/img/001.ak47_001_0087.jpg"
+                }
+              });
+            });
+            $('#img4').click(function(){
+              $.ajax({
+                url: '/changepic',
+                data:{
+                  a: document.getElementById("img1").src,
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                  $("#result").html(data.result);
+                  document.getElementById("img1").src = "http://127.0.0.1:5000/static/img/001.ak47_001_0087.jpg"
+                }
+              });
+            });
+            $('#img5').click(function(){
+              $.ajax({
+                url: '/changepic',
+                data:{
+                  a: document.getElementById("img1").src,
+                },
+                dataType: 'JSON',
+                type: 'GET',
+                success: function(data){
+                  $("#result").html(data.result);
+                  document.getElementById("img1").src = "http://127.0.0.1:5000/static/img/001.ak47_001_0087.jpg"
+                }
+              });
+            });
+        });
+      </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Picture Search</h3>
+      </div>
+      <hr/>
+      <button class="btn btn-success" id="click">random</button>
+      <p>
+      <img id="img1" src="../static/img/001.ak47_001_0086.jpg" width="200" height="200">
+      <img id="img2" src="../static/img/001.ak47_001_0087.jpg" width="200" height="200">
+      <img id="img3" src="../static/img/001.ak47_001_0087.jpg" width="200" height="200">
+      <img id="img4" src="../static/img/001.ak47_001_0087.jpg" width="200" height="200">
+      <img id="img5" src="../static/img/001.ak47_001_0087.jpg" width="200" height="200">
+      <p>
+      <div>
+        <span id="result">?</span>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
